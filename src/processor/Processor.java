@@ -11,6 +11,11 @@ public class Processor {
 	private List<SearchInterface> searchMethod = new ArrayList<SearchInterface>();
 	private List<Event> events;
 	
+	public Processor()
+	{
+		
+	}
+	
 	public Processor (List<Event> myEvents){
 		events = myEvents;
 	}
@@ -18,6 +23,11 @@ public class Processor {
 	public void addFilter (SearchInterface sort){
 		searchMethod.add(sort);
 	}
+	
+	public void initializeEventList(List<Event> eventList){
+		this.events = eventList;
+	}
+
 	
 	public List<Event> process (){
 		List<Event> tempEvents = events; 

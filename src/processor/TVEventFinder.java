@@ -20,10 +20,10 @@ public class TVEventFinder implements SearchInterface{
 		ArrayList<Event> keyList = new ArrayList<Event> ();
 
 		for (Event e: myEvents){
-			if ((e.getSubject().indexOf("TV")) == -1){
+			/*if ((e.getSubject().indexOf("TV")) == -1){
 				keyList.add(e);
 				break;
-			}
+			}*/
 			for (String k: key){	
 				if ((e.getSubject().indexOf(k)) != -1){
 					keyList.add(e);

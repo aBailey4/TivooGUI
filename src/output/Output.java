@@ -77,8 +77,27 @@ public abstract class Output
 		}
 		return event.getHTML();
 	}
+	
+	public String rowCol()
+	{
+		Tag event = new Tag("tr","height",100);
+		
+		for (Event d: eventList)
+		{
+			Tag col = new Tag("td","width",250);
+
+			//String link = d.generateDetailsHTML();
+			String title = d.getSubject();
+			
+			//col.addInnerHTML("<a href=\""+link+"\">"+title+"</a> ");	
+			col.addInnerHTML(title);
+			event.addInnerHTML(col);
+		}
+		return event.getHTML();
+	}
 
 	public abstract void generate(GregorianCalendar first, GregorianCalendar last);
+	public abstract void generate();
 	
 	public static List<Event> genList(List<Event> list, Tag eTag, Tag tTag)
 	{

@@ -37,4 +37,9 @@ public class DayWeekMonth extends Output{
 			e.printStackTrace();
 		}
 	}
+	
+	public void generate()
+	{
+		
+	}
 }
